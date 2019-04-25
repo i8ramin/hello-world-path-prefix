@@ -5,8 +5,10 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build --prefix-paths",
-    "develop": "gatsby develop",
+    "clean": "gatsby clean && rm -rf dist",
+    "build": "gatsby build",
+    "build:prod": "gatsby build --prefix-paths && mkdir -p ./dist/foo && mv ./public/* ./dist/foo",
+    "dev": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
